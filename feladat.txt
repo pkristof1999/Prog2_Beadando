@@ -1,0 +1,2 @@
+Van egy termék amihez 5 db alapanyag szükséges. Állítható a felületen a nyerasnyagok beszerzési ára, illetve a gyártási idő is. Rövidebb gyártási idő arányosan magasabb gyártási költséget igényel.
+A feladat, hogy a paraméterek alapján visszaadja a program a felületen, hogy mennyi a nyereség, illetve mikortól nyereséges (lehet görbét rajzoltatni is).
