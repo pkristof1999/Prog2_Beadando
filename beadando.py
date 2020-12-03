@@ -1,9 +1,5 @@
 #NOT FINISHED
-#NOT FINISHED
-#NOT FINISHED
-#NOT FINISHED
-#NOT FINISHED
-#NOT FINISHED
+
 # -*- coding: utf-8 -*-
 
 # Form implementation generated from reading ui file 'beadando.ui'
@@ -27,7 +23,7 @@ class Ui_MainWindow(object):
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(512, 802)
+        MainWindow.resize(512, 857)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.termek_neve = QtWidgets.QLabel(self.centralwidget)
@@ -41,7 +37,7 @@ class Ui_MainWindow(object):
         self.termek_neve.setAlignment(QtCore.Qt.AlignCenter)
         self.termek_neve.setObjectName("termek_neve")
         self.alapanyag_1 = QtWidgets.QLabel(self.centralwidget)
-        self.alapanyag_1.setGeometry(QtCore.QRect(20, 130, 231, 51))
+        self.alapanyag_1.setGeometry(QtCore.QRect(20, 130, 281, 51))
         font = QtGui.QFont()
         font.setPointSize(11)
         font.setBold(False)
@@ -53,7 +49,7 @@ class Ui_MainWindow(object):
         self.alapanyag_1.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.alapanyag_1.setObjectName("alapanyag_1")
         self.alapanyag_2 = QtWidgets.QLabel(self.centralwidget)
-        self.alapanyag_2.setGeometry(QtCore.QRect(20, 180, 231, 51))
+        self.alapanyag_2.setGeometry(QtCore.QRect(20, 180, 281, 51))
         font = QtGui.QFont()
         font.setPointSize(11)
         font.setBold(False)
@@ -64,7 +60,7 @@ class Ui_MainWindow(object):
         self.alapanyag_2.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.alapanyag_2.setObjectName("alapanyag_2")
         self.alapanyag_3 = QtWidgets.QLabel(self.centralwidget)
-        self.alapanyag_3.setGeometry(QtCore.QRect(20, 230, 231, 51))
+        self.alapanyag_3.setGeometry(QtCore.QRect(20, 230, 281, 51))
         font = QtGui.QFont()
         font.setPointSize(11)
         font.setBold(False)
@@ -75,7 +71,7 @@ class Ui_MainWindow(object):
         self.alapanyag_3.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.alapanyag_3.setObjectName("alapanyag_3")
         self.alapanyag_4 = QtWidgets.QLabel(self.centralwidget)
-        self.alapanyag_4.setGeometry(QtCore.QRect(20, 280, 231, 51))
+        self.alapanyag_4.setGeometry(QtCore.QRect(20, 280, 281, 51))
         font = QtGui.QFont()
         font.setPointSize(11)
         font.setBold(False)
@@ -86,7 +82,7 @@ class Ui_MainWindow(object):
         self.alapanyag_4.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.alapanyag_4.setObjectName("alapanyag_4")
         self.alapanyag_5 = QtWidgets.QLabel(self.centralwidget)
-        self.alapanyag_5.setGeometry(QtCore.QRect(20, 330, 231, 51))
+        self.alapanyag_5.setGeometry(QtCore.QRect(20, 330, 281, 51))
         font = QtGui.QFont()
         font.setPointSize(11)
         font.setBold(False)
@@ -96,17 +92,17 @@ class Ui_MainWindow(object):
         self.alapanyag_5.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.alapanyag_5.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.alapanyag_5.setObjectName("alapanyag_5")
-        self.alapanyag_6 = QtWidgets.QLabel(self.centralwidget)
-        self.alapanyag_6.setGeometry(QtCore.QRect(20, 380, 231, 51))
+        self.mennyiseg = QtWidgets.QLabel(self.centralwidget)
+        self.mennyiseg.setGeometry(QtCore.QRect(20, 380, 281, 51))
         font = QtGui.QFont()
         font.setPointSize(11)
         font.setBold(False)
         font.setWeight(50)
         font.setKerning(True)
-        self.alapanyag_6.setFont(font)
-        self.alapanyag_6.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.alapanyag_6.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
-        self.alapanyag_6.setObjectName("alapanyag_6")
+        self.mennyiseg.setFont(font)
+        self.mennyiseg.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.mennyiseg.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.mennyiseg.setObjectName("mennyiseg")
         self.beszerzesi_ar_1 = QtWidgets.QPlainTextEdit(self.centralwidget)
         self.beszerzesi_ar_1.setGeometry(QtCore.QRect(340, 140, 151, 31))
         self.beszerzesi_ar_1.setObjectName("beszerzesi_ar_1")
@@ -122,20 +118,47 @@ class Ui_MainWindow(object):
         self.beszerzesi_ar_5 = QtWidgets.QPlainTextEdit(self.centralwidget)
         self.beszerzesi_ar_5.setGeometry(QtCore.QRect(340, 340, 151, 31))
         self.beszerzesi_ar_5.setObjectName("beszerzesi_ar_5")
-        self.idotartam = QtWidgets.QPlainTextEdit(self.centralwidget)
-        self.idotartam.setGeometry(QtCore.QRect(340, 390, 151, 31))
-        self.idotartam.setObjectName("idotartam")
         self.line = QtWidgets.QFrame(self.centralwidget)
-        self.line.setGeometry(QtCore.QRect(20, 520, 471, 20))
+        self.line.setGeometry(QtCore.QRect(20, 560, 471, 20))
         self.line.setFrameShape(QtWidgets.QFrame.HLine)
         self.line.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line.setObjectName("line")
         self.listWidget = QtWidgets.QListWidget(self.centralwidget)
-        self.listWidget.setGeometry(QtCore.QRect(20, 550, 471, 201))
+        self.listWidget.setGeometry(QtCore.QRect(20, 600, 471, 201))
         self.listWidget.setObjectName("listWidget")
         self.szamolas = QtWidgets.QPushButton(self.centralwidget)
-        self.szamolas.setGeometry(QtCore.QRect(340, 480, 151, 31))
+        self.szamolas.setGeometry(QtCore.QRect(340, 510, 151, 31))
         self.szamolas.setObjectName("szamolas")
+        self.ido = QtWidgets.QLabel(self.centralwidget)
+        self.ido.setGeometry(QtCore.QRect(20, 430, 281, 51))
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        font.setBold(False)
+        font.setWeight(50)
+        font.setKerning(True)
+        self.ido.setFont(font)
+        self.ido.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.ido.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.ido.setObjectName("ido")
+        self.elkeszitesi_ido = QtWidgets.QSlider(self.centralwidget)
+        self.elkeszitesi_ido.setGeometry(QtCore.QRect(370, 440, 121, 31))
+        self.elkeszitesi_ido.setOrientation(QtCore.Qt.Horizontal)
+        self.elkeszitesi_ido.setObjectName("elkeszitesi_ido")
+        self.elkeszitesi_ido.setMinimum(5)
+        self.elkeszitesi_ido.setMaximum(15)
+        self.elkeszitesi_ido.setValue(10)
+        self.elkeszitesi_ido.setTickPosition(QtWidgets.QSlider.TicksBothSides)
+        self.elkeszitesi_ido.setTickInterval(1)
+        self.db_mennyiseg = QtWidgets.QPlainTextEdit(self.centralwidget)
+        self.db_mennyiseg.setGeometry(QtCore.QRect(340, 390, 151, 31))
+        self.db_mennyiseg.setObjectName("db_mennyiseg")
+        self.ido_mennyisege = QtWidgets.QLabel(self.centralwidget)
+        self.ido_mennyisege.setGeometry(QtCore.QRect(330, 440, 31, 31))
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        self.ido_mennyisege.setFont(font)
+        self.ido_mennyisege.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.ido_mennyisege.setObjectName("ido_mennyisege")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 512, 21))
@@ -150,19 +173,27 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Kenyér Rendelés"))
         self.termek_neve.setText(_translate("MainWindow", "Rozskenyér"))
-        self.alapanyag_1.setText(_translate("MainWindow", "Kenyérliszt beszerzési ára (Ft):"))
-        self.alapanyag_2.setText(_translate("MainWindow", "Víz beszerzési ára (Ft):"))
-        self.alapanyag_3.setText(_translate("MainWindow", "Instant élesztő beszerzési ára (Ft):"))
-        self.alapanyag_4.setText(_translate("MainWindow", "Só beszerzési ára (Ft):"))
-        self.alapanyag_5.setText(_translate("MainWindow", "Finomliszt beszerzési ára (Ft):"))
-        self.alapanyag_6.setText(_translate("MainWindow", "Elkészítési idő (Aé. 14 óra):"))
+        self.alapanyag_1.setText(_translate("MainWindow", "Kenyérliszt beszerzési ára (Ft/db):"))
+        self.alapanyag_2.setText(_translate("MainWindow", "Víz beszerzési ára (Ft/db):"))
+        self.alapanyag_3.setText(_translate("MainWindow", "Instant élesztő beszerzési ára (Ft/db):"))
+        self.alapanyag_4.setText(_translate("MainWindow", "Só beszerzési ára (Ft/db):"))
+        self.alapanyag_5.setText(_translate("MainWindow", "Finomliszt beszerzési ára (Ft/db):"))
+        self.mennyiseg.setText(_translate("MainWindow", "Rendelt mennyiség (db):"))
         self.szamolas.setText(_translate("MainWindow", "Számol!"))
+        self.ido.setText(_translate("MainWindow", "Elkészítési idő (5-15 óra):"))
     
-    def Configure(self):
+    def configureButton(self):
         self.szamolas.clicked.connect(self.showValues)
-    
+
+    def slider(self):
+        self.ido_mennyisege.setText("10")
+        self.elkeszitesi_ido.valueChanged.connect(lambda: self.sliderValue())
+
+    def sliderValue(self):
+        self.ido_mennyisege.setText(str(self.elkeszitesi_ido.value()))
+
     
     def showValues(self):
         self.C.storeValues(self.V,
@@ -171,11 +202,12 @@ class Ui_MainWindow(object):
                            self.beszerzesi_ar_3.toPlainText(),
                            self.beszerzesi_ar_4.toPlainText(),
                            self.beszerzesi_ar_5.toPlainText(),
-                           self.idotartam.toPlainText())
+                           self.db_mennyiseg.toPlainText(),
+                           self.elkeszitesi_ido.value())
         element = self.C.calculateValues(self.V)
         result = QtWidgets.QListWidgetItem(element)
         self.listWidget.addItem(result)
-
+        
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
@@ -183,6 +215,7 @@ if __name__ == "__main__":
     ui = Ui_MainWindow()
     ui.initSubClasses()
     ui.setupUi(MainWindow)
-    ui.Configure()
+    ui.configureButton()
+    ui.slider()
     MainWindow.show()
     sys.exit(app.exec_())
