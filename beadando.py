@@ -161,10 +161,10 @@ class Ui_MainWindow(object):
         self.szamolas.setText(_translate("MainWindow", "Számol!"))
     
     def Configure(self):
-        self.szamolas.clicked.connect(self.calcValues)
+        self.szamolas.clicked.connect(self.showValues)
     
     
-    def calcValues(self):
+    def showValues(self):
         self.C.storeValues(self.V,
                            self.beszerzesi_ar_1.toPlainText(),
                            self.beszerzesi_ar_2.toPlainText(),
@@ -173,8 +173,8 @@ class Ui_MainWindow(object):
                            self.beszerzesi_ar_5.toPlainText(),
                            self.idotartam.toPlainText())
         element = self.C.calculateValues(self.V)
-        itemResult = QtWidgets.QListWidgetItem(element)
-        self.listWidget.addItem(itemResult)
+        result = QtWidgets.QListWidgetItem(element)
+        self.listWidget.addItem(result)
 
 
 if __name__ == "__main__":
