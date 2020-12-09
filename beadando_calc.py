@@ -7,6 +7,9 @@ class Calculate:
         fliszt = a.getFliszt()
         db = a.getDb()
         ido = a.getIdo()
+        eladasi_ar = 500
+        nyereseg = ""
+        oradij = 300
         
         try:
             if kliszt == "0" or kliszt == "-0" or \
@@ -15,7 +18,7 @@ class Calculate:
                so == "0" or so == "-0" or \
                fliszt == "0" or fliszt == "-0" or\
                db == "0" or db == "-0":
-                    raise Exception("Hiba! Egy vagy több értéknél 0 a megadott érték!\nHa mégis 0-val számolna, így adja meg: .0")
+                raise Exception("Hiba! Egy vagy több értéknél 0 a megadott érték!\nHa mégis 0-val számolna, így adja meg: .0")
 
             if float(kliszt) < 0 or \
                float(viz) < 0 or \
@@ -23,31 +26,58 @@ class Calculate:
                float(so) < 0 or \
                float(fliszt) < 0 or \
                float(db) < 0:
-                    raise Exception("Hiba! Egy vagy több értéknél negatív a megadott érték!")
+                raise Exception("Hiba! Egy vagy több értéknél negatív a megadott érték!")
 
             if kliszt == ".0":
-                    kliszt = "0.0"
-                    kliszt = float(kliszt)
+                kliszt = "0.0"
+                kliszt = float(kliszt)
             if viz == ".0":
-                    viz = "0.0"
-                    viz = float(viz)
+                viz = "0.0"
+                viz = float(viz)
             if eleszto == ".0":
-                    eleszto = "0.0"
-                    eleszto = float(eleszto)
+                eleszto = "0.0"
+                eleszto = float(eleszto)
             if so == ".0":
-                    so = "0.0"
-                    so = float(so)
+                so = "0.0"
+                so = float(so)
             if fliszt == ".0":
-                    fliszt = "0.0"
-                    fliszt = float(fliszt)
+                fliszt = "0.0"
+                fliszt = float(fliszt)
             if db == ".0":
-                    db == "0.0"
-                    db = float(db)
+                db == "0.0"
+                db = float(db)
         
-            sumOfValues = (float(kliszt) + float(viz) + float(eleszto) + float(so) + float(fliszt)) * float(db)
-            allIncome = sumOfValues * ido
-            profit = float(allIncome) - sumOfValues
-            showTxt = f"Darabszám: {int(db)} Db\nBeruházás: {sumOfValues:,} Ft\nIdő: {ido} Óra\nBevétel: {allIncome:,} Ft\nProfit: {profit:,} Ft".replace(",", " ")
+            calc_oradij = (1 - (int(ido)) / 15) * oradij + oradij
+            calc_oradij = round(calc_oradij)
+            ora_mennyiseg = int(db) / int(ido)
+            ora_mennyiseg = round(ora_mennyiseg)
+            osszeg = float(kliszt) + float(viz) + float(eleszto) + float(so) + float(fliszt)
+            profit_hour = (ora_mennyiseg * eladasi_ar) - ora_mennyiseg * osszeg - calc_oradij
+            income = eladasi_ar * int(db)
+            all_profit = income - (osszeg * int(db)) - (calc_oradij * int(ido))
+
+            if profit_hour < 0:
+                inc = "A cég óránként termelt vesztesége: "
+            else:
+                inc = "A cég óránként termelt nyeresége: "
+
+            if all_profit == 0:
+                balance = "A cég termelt nyeresége: "
+                nyereseg = "Nem."
+            elif all_profit < 0:
+                balance = "A cég termelt vesztesége: "
+                nyereseg = "Nem."
+            else:
+                balance = "A cég termelt nyeresége: "
+                nyereseg = "Igen."
+        
+            showTxt = f"Darabszám: {int(db)} Db\n" \
+                      f"Idő: {int(ido)}\n" \
+                      f"Beruházás: {float(osszeg)} Ft\n" \
+                      f"Óradíj: {float(calc_oradij)} Ft\n" \
+                      f"{balance}{float(all_profit)} Ft\n" \
+                      f"{inc}{float(profit_hour)} Ft\n" \
+                      f"Nyereséges a kalkuláció? {nyereseg}"
 
         except ValueError as ve:
             return f"Hiba! Egy vagy több értéket kihagyott / rosszul adott meg!\n\n{ve}"

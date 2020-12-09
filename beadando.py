@@ -107,8 +107,7 @@ class Ui_MainWindow(object):
         self.line.setFrameShape(QtWidgets.QFrame.HLine)
         self.line.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line.setObjectName("line")
-        font.setPointSize(16)
-        font.setBold(True)
+        font.setPointSize(12)
         self.listWidget = QtWidgets.QListWidget(self.centralwidget)
         self.listWidget.setGeometry(QtCore.QRect(20, 600, 471, 201))
         self.listWidget.setFont(font)
@@ -139,7 +138,7 @@ class Ui_MainWindow(object):
         self.db_mennyiseg.setGeometry(QtCore.QRect(340, 390, 151, 31))
         self.db_mennyiseg.setFont(font)
         self.db_mennyiseg.setObjectName("db_mennyiseg")
-        self.db_mennyiseg.setPlaceholderText("Beszerzési ár")
+        self.db_mennyiseg.setPlaceholderText("Mennyiség")
         self.ido_mennyisege = QtWidgets.QLabel(self.centralwidget)
         self.ido_mennyisege.setGeometry(QtCore.QRect(330, 440, 31, 31))
         self.ido_mennyisege.setFont(font)
@@ -159,7 +158,8 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Kenyér Rendelés"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Rozskenyér Árkalkulátor"))
+        #MainWindow.setWindowIcon(QtGui.QIcon(QtGui.QPixmap("<Elérési útvonal>")))
         self.termek_neve.setText(_translate("MainWindow", "Rozskenyér"))
         self.alapanyag_1.setText(_translate("MainWindow", "Kenyérliszt beszerzési ára (Ft/db):"))
         self.alapanyag_2.setText(_translate("MainWindow", "Víz beszerzési ára (Ft/db):"))
