@@ -159,7 +159,6 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Rozskenyér Árkalkulátor"))
-        #MainWindow.setWindowIcon(QtGui.QIcon(QtGui.QPixmap("<Elérési útvonal>")))
         self.termek_neve.setText(_translate("MainWindow", "Rozskenyér"))
         self.alapanyag_1.setText(_translate("MainWindow", "Kenyérliszt beszerzési ára (Ft/db):"))
         self.alapanyag_2.setText(_translate("MainWindow", "Víz beszerzési ára (Ft/db):"))
