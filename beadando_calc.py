@@ -9,14 +9,22 @@ class Calculate:
         ido = a.getIdo()
         
         try:
-            if kliszt == "0" or \
-               viz == "0" or \
-               eleszto == "0" or \
-               so == "0" or \
-               fliszt == "0" or \
-               db == "0":
-                    raise Exception
-            
+            if kliszt == "0" or kliszt == "-0" or \
+               viz == "0" or viz == "-0" or \
+               eleszto == "0" or eleszto == "-0" or \
+               so == "0" or so == "-0" or \
+               fliszt == "0" or fliszt == "-0" or\
+               db == "0" or db == "-0":
+                    raise Exception("Hiba! Egy vagy több értéknél 0 a megadott érték!\nHa mégis 0-val számolna, így adja meg: .0")
+
+            if float(kliszt) < 0 or \
+               float(viz) < 0 or \
+               float(eleszto) < 0 or \
+               float(so) < 0 or \
+               float(fliszt) < 0 or \
+               float(db) < 0:
+                    raise Exception("Hiba! Egy vagy több értéknél negatív a megadott érték!")
+
             if kliszt == ".0":
                     kliszt = "0.0"
                     kliszt = float(kliszt)
@@ -41,10 +49,10 @@ class Calculate:
             profit = float(allIncome) - sumOfValues
             showTxt = f"Darabszám: {int(db)} Db\nBeruházás: {sumOfValues:,} Ft\nIdő: {ido} Óra\nBevétel: {allIncome:,} Ft\nProfit: {profit:,} Ft".replace(",", " ")
 
-        except ValueError:
-            return "Hiba! Egy vagy több értéket kihagyott / rosszul adta meg!"
-        except Exception:
-            return "Hiba! Egy vagy több értéknél 0 a megadott érték!\nHa mégis 0-val számolna, így adja meg: .0"
+        except ValueError as ve:
+            return f"Hiba! Egy vagy több értéket kihagyott / rosszul adott meg!\n\n{ve}"
+        except Exception as e:
+            return f"{e}"
 
         return showTxt
 
