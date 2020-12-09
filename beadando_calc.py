@@ -52,9 +52,9 @@ class Calculate:
             ora_mennyiseg = int(db) / int(ido)
             ora_mennyiseg = round(ora_mennyiseg)
             osszeg = float(kliszt) + float(viz) + float(eleszto) + float(so) + float(fliszt)
-            profit_hour = (ora_mennyiseg * eladasi_ar) - ora_mennyiseg * osszeg - calc_oradij
             income = eladasi_ar * int(db)
             all_profit = income - (osszeg * int(db)) - (calc_oradij * int(ido))
+            profit_hour = all_profit / int(ido)
 
             if profit_hour < 0:
                 inc = "A cég óránként termelt vesztesége: "
@@ -72,11 +72,11 @@ class Calculate:
                 nyereseg = "Igen."
         
             showTxt = f"Darabszám: {int(db)} Db\n" \
-                      f"Idő: {int(ido)}\n" \
-                      f"Beruházás: {float(osszeg)} Ft\n" \
-                      f"Óradíj: {float(calc_oradij)} Ft\n" \
-                      f"{balance}{float(all_profit)} Ft\n" \
-                      f"{inc}{float(profit_hour)} Ft\n" \
+                      f"Idő: {int(ido)} Óra\n" \
+                      f"Beruházás: {float(osszeg):.2f} Ft\n" \
+                      f"Óradíj: {int(calc_oradij)} Ft/Óra\n" \
+                      f"{balance}{float(all_profit):.2f} Ft\n" \
+                      f"{inc}{float(profit_hour):.2f} Ft\n" \
                       f"Nyereséges a kalkuláció? {nyereseg}"
 
         except ValueError as ve:
